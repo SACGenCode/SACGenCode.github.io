@@ -32,9 +32,18 @@ jobs:
     steps:
       - name: Navigate to Repository Root
         run: cd $GITHUB_WORKSPACE
-        
+
+      - name: List Build Directory
+        run: ls -l build/
+
+      - name: Debug Workflow
+        run: |
+          pwd
+          ls -l
+          ls -l build/
+
       - name: Copy Build to SACGenCode.github.io
-        run: cp -r build/* ../SACGenCode.github.io/
+        run: cp -r $GITHUB_WORKSPACE/build/* $GITHUB_WORKSPACE/SACGenCode.github.io/
 
       - name: Deploy to SACGenCode.github.io
         uses: peaceiris/actions-gh-pages@v3
