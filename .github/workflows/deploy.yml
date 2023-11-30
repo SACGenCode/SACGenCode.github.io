@@ -30,23 +30,17 @@ jobs:
     needs: build
 
     steps:
-      - name: Navigate to Repository Root
-        run: cd $GITHUB_WORKSPACE
-
-      - name: List Build Directory
-        run: ls -l build/
-
-      - name: Debug Workflow
-        run: |
-          pwd
-          ls -l
-          ls -l build/
+      - name: Clone SACGenCode.github.io Repository
+        run: git clone https://github.com/SACGenCode/SACGenCode.github.io.git SACGenCode.github.io
 
       - name: Copy Build to SACGenCode.github.io
-        run: cp -r $GITHUB_WORKSPACE/build/* $GITHUB_WORKSPACE/SACGenCode.github.io/
+        run: cp -r build/* SACGenCode.github.io/
 
-      - name: Deploy to SACGenCode.github.io
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: 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
-          publish_dir: ../SACGenCode.github.io/
+      - name: Commit and Push Changes
+        working-directory: ./SACGenCode.github.io
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Update build from main repository"
+          git push origin main
