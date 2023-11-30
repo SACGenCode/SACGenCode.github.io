@@ -34,7 +34,7 @@ jobs:
         run: git clone https://github.com/SACGenCode/SACGenCode.github.io.git SACGenCode.github.io
 
       - name: Copy Build to SACGenCode.github.io
-        run: cp -r build/* SACGenCode.github.io/
+        run: cp -r "build/"* SACGenCode.github.io/
 
       - name: Commit and Push Changes
         working-directory: ./SACGenCode.github.io
