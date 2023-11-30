@@ -30,6 +30,9 @@ jobs:
     needs: build
 
     steps:
+      - name: Navigate to Repository Root
+        run: cd $GITHUB_WORKSPACE
+        
       - name: Copy Build to SACGenCode.github.io
         run: cp -r build/* ../SACGenCode.github.io/
 
