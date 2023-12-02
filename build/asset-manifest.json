@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.da93f121.css",
-    "main.js": "/static/js/main.970746bd.js",
+    "main.css": "/static/css/main.ea39bd67.css",
+    "main.js": "/static/js/main.21471629.js",
     "static/js/787.ff97ecca.chunk.js": "/static/js/787.ff97ecca.chunk.js",
+    "static/media/rohit-chouhan.jpg": "/static/media/rohit-chouhan.a3a706c3fcd4986ea321.jpg",
+    "static/media/gen-code-logo.png": "/static/media/gen-code-logo.dffbe9cc4d343c6fd901.png",
     "index.html": "/index.html",
-    "main.da93f121.css.map": "/static/css/main.da93f121.css.map",
-    "main.970746bd.js.map": "/static/js/main.970746bd.js.map",
+    "main.ea39bd67.css.map": "/static/css/main.ea39bd67.css.map",
+    "main.21471629.js.map": "/static/js/main.21471629.js.map",
     "787.ff97ecca.chunk.js.map": "/static/js/787.ff97ecca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da93f121.css",
-    "static/js/main.970746bd.js"
+    "static/css/main.ea39bd67.css",
+    "static/js/main.21471629.js"
   ]
 }

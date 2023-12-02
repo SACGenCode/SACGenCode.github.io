@@ -26,11 +26,11 @@ const About = () => {
                         </div>
                     </div>
                     <hr></hr>
-                    <p>SAC Hero is a powerful open-source tool designed to streamline and simplify the process of generating JavaScript code for SAP Analytics Cloud's Analytic Applications. Whether you're a seasoned developer or new to Analytic Application development, SAC Hero provides a suite of user-friendly tools to effortlessly create and design code tailored to your specific requirements.</p>
+                    <p>SAC Gen-Code is a powerful open-source tool designed to streamline and simplify the process of generating JavaScript code for SAP Analytics Cloud's Analytic Applications. Whether you're a seasoned developer or new to Analytic Application development, SAC Gen-Code provides a suite of user-friendly tools to effortlessly create and design code tailored to your specific requirements.</p>
 
-                    <p class="mt-2">With SAC Hero, you have access to a variety of tools that facilitate the efficient development of Analytic Applications. The intuitive interface ensures a seamless user experience, making it easy for both beginners and experienced developers to navigate and utilize the application effectively.</p>
+                    <p class="mt-2">With SAC Gen-Code, you have access to a variety of tools that facilitate the efficient development of Analytic Applications. The intuitive interface ensures a seamless user experience, making it easy for both beginners and experienced developers to navigate and utilize the application effectively.</p>
 
-                    <p class="mt-2">Empower your Analytic Application development with SAC Hero's comprehensive features, all while enjoying the benefits of an open-source platform. Enhance your productivity and bring your SAP Analytics Cloud projects to life with this user-friendly and efficient tool.</p>
+                    <p class="mt-2">Empower your Analytic Application development with SAC Gen-Code's comprehensive features, all while enjoying the benefits of an open-source platform. Enhance your productivity and bring your SAP Analytics Cloud projects to life with this user-friendly and efficient tool.</p>
 
                     <p class="mt-2"><i>SAC Gen-Code is developed in ReactJs, and Bulma CSS Framework</i></p>
                     <hr></hr>

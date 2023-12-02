@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import './assets/bulma/css/bulma.min.css';
 import App from './App';
@@ -20,11 +20,13 @@ import ContactUs from './components/pages/contact-us';
 import { GetProperty } from './components/tools/get-property';
 
 ReactDOM.render(
-  <Router>
-    <React.Fragment>
+  <React.StrictMode>
+    {/* Use StrictMode for additional checks during development */}
+    <Router>
       <Header />
       <div>
         <Routes>
+          {/* Define your routes */}
           <Route path="/" element={<Home />} />
           <Route path="/tools" element={<App />} />
           <Route path="/tools/data-action" element={<DataAction />} />
@@ -40,8 +42,8 @@ ReactDOM.render(
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </div>
-    </React.Fragment>
-  </Router>,
+    </Router>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
