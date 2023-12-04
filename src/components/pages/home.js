@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './home.css';
 
 const Home = () => {
     const [repos, setRepos] = useState([]);
@@ -38,60 +39,64 @@ const Home = () => {
                         </Link>
                     </div>
                 </div>
+                
             </section>
-            <div className='container'>
-                <div class="columns mt-2">
-                    <div class="column is-one-third">
-                        <div class="box is-danger">
-                            <p class="title is-4"><i class="fas fa-code has-text-link"></i> Code Generation</p>
-                            <p>Effortlessly generate JavaScript code for SAP Analytics Cloud Analytic Applications.</p>
+            <section class="section">
+                <div className='container'>
+                    <div class="columns mt-2">
+                        <div class="column is-one-third">
+                            <div class="box is-danger">
+                                <p class="title is-4"><i class="fas fa-code has-text-link"></i> Code Generation</p>
+                                <p>Effortlessly generate JavaScript code for SAP Analytics Cloud Analytic Applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-third">
+                            <div class="box is-warning">
+                                <p class="title is-4"><i class="fas fa-cogs has-text-warning"></i> User-Friendly Interface</p>
+                                <p>Intuitive and easy-to-use tools suitable for developers of all levels.</p>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-third">
+                            <div class="box">
+                                <p class="title is-4"><i class="fas fa-puzzle-piece has-text-success"></i> Comprehensive Features</p>
+                                <p>Access a range of features to enhance your Analytic Application development.</p>
+                            </div>
                         </div>
                     </div>
+                    <hr></hr>
+                    <h1 className="title is-4"># Try our Free Custom-Widgets</h1>
+                    <div className="columns is-multiline">
 
-                    <div class="column is-one-third">
-                        <div class="box is-warning">
-                            <p class="title is-4"><i class="fas fa-cogs has-text-warning"></i> User-Friendly Interface</p>
-                            <p>Intuitive and easy-to-use tools suitable for developers of all levels.</p>
-                        </div>
-                    </div>
-
-                    <div class="column is-one-third">
-                        <div class="box">
-                            <p class="title is-4"><i class="fas fa-puzzle-piece has-text-success"></i> Comprehensive Features</p>
-                            <p>Access a range of features to enhance your Analytic Application development.</p>
-                        </div>
-                    </div>
-                </div>
-                <hr></hr>
-                <h1 className="title is-4"># Try our Free Custom-Widgets</h1>
-                <div className="columns is-multiline">
-
-                    {loading &&
-                        <progress class="progress is-small is-primary" max="100"></progress>
-                    }
-                    {repos.length > 0 ? (
-                        repos.map((repo, index) => (
-                            <div key={index} className="column is-4">
-                                <a target='_blank' href={repo.html_url} rel="noreferrer">
-                                    <div className="box">
-                                        <div className="columns" style={{ height: "150px" }}>
-                                            <div className="column is-3 is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-                                                <span className="icon is-large">
-                                                    <img src={`https://raw.githubusercontent.com/${repo.full_name}/main/icon.png`} alt={repo.full_name} aria-hidden />
-                                                </span>
-                                            </div>
-                                            <div className="column is-9">
-                                                <p className="subtitle is-5 has-text-weight-bold">{repo.name}</p>
-                                                <p>{repo.description}</p>
+                        {loading &&
+                            <progress class="progress is-small is-primary" max="100"></progress>
+                        }
+                        {repos.length > 0 ? (
+                            repos.map((repo, index) => (
+                                <div key={index} className="column is-4">
+                                    <a target='_blank' href={repo.html_url} rel="noreferrer">
+                                        <div className="box">
+                                            <div className="columns item-size">
+                                                <div className="column is-3 is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+                                                    <span className="icon is-large">
+                                                        <img src={`https://raw.githubusercontent.com/${repo.full_name}/main/icon.png`} alt={repo.full_name} aria-hidden />
+                                                    </span>
+                                                </div>
+                                                <div className="column is-9">
+                                                    <p className="subtitle is-5 has-text-weight-bold">{repo.name}</p>
+                                                    <p>{repo.description}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        ))
-                    ) : (<></>)}
+                                    </a>
+                                </div>
+                            ))
+                        ) : (<></>)}
+                    </div>
                 </div>
-            </div>
+            </section>
+            
             <footer className="mt-4 footer has-background-dark">
 
                 <div className="columns">

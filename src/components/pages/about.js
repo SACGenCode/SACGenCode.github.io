@@ -22,7 +22,7 @@ const About = () => {
                     <div class="control">
                         <div class="tags has-addons">
                             <span class="tag is-dark">Current Version</span>
-                            <span class="tag is-success">0.1.0</span>
+                            <span class="tag is-success">0.1.1</span>
                         </div>
                     </div>
                     <hr></hr>
@@ -79,7 +79,7 @@ const About = () => {
                                 </div>
                             </div>
                             <br />
-                            <p><i>Contact me regarding any idea/new feature or any inquiry to my email address, <span class="has-text-dark">(click on email to visible)</span> </i> <a href="#email" onClick={emailAction}>{email}</a></p>
+                            <p><i>Contact me regarding any idea/new feature or any inquiry to my email address, <span class="has-text-dark">(click on email to visible)</span> </i> <a href="mailto:itsrohitofficial@gmail.com" onClick={emailAction}>{email}</a></p>
                         </div>
                     </div>
                 </div>
