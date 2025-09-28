@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# SAC Code Generator
+
+A React application for generating SAP Analytics Cloud scripting code snippets.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
